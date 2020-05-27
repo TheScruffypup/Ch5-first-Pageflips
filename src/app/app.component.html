@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,  initial-scale=1">
+        <title>Crestron CH5 Basic</title>
+        
+    </head>
+    <body>
+        <ch5-triggerview class="triggerview" receivestateshow="30" gestureable="false" endless="false">
+            <div class="pagelogo">
+                <p>Welcome to </p> 
+                <div class="roomname" data-ch5-textcontent="8"></div> 
+                <ch5-image id="logo" url="./assets/Home.png"
+                sendeventonclick="60">
+                </ch5-image>
+            </div>
+
+
+        </ch5-triggerview>
+
+        <ch5-triggerview class="triggerview" receivestateshow="26" gestureable="false" endless="false">
+            <div class="pagepowering">
+                <div>
+                    <p>Setting up system.  Please wait</p>
+                </div>
+                <div class="progress">
+                    <ch5-slider value="20"
+                        min="0"
+                        max="65535"
+                        receivestatevalue="1">
+                    </ch5-slider>
+                </div>
+            </div>
+            
+
+
+        </ch5-triggerview>
+
+
+        <ch5-triggerview class="triggerview" receivestateshow="32" gestureable="false" endless="false">
+
+        
+
+        <div class="top-bar">
+            <img id="logo-img" src="./assets/globe.png">
+            <h1 id="header-text">CH5 Basic Example</h1>
+            <h1></h1>
+        </div>
+
+        <div class="middle-bar">
+            <div class="source-pages">
+                <ch5-triggerview receivestateshow="11">
+                    <div class="subpage-header">
+                        <h1 class="subpage-header-text">Home Page</h1>
+                        <img src="assets/Line Horizontal.png">
+                    </div>
+                    <div class=subpage-main>
+                        <p id="home-page-text">Home Page Text goes here</p>
+                    </div>
+                </ch5-triggerview>
+                <ch5-triggerview receivestateshow="12">
+                    <div class="subpage-header">
+                        <h1 class="subpage-header-text">Laptop Selected</h1>
+                        <img src="assets/Line Horizontal.png">
+                    </div>
+                    <div class=subpage-main>
+                        <p id="home-page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quas quidem impedit dolorum iure dolores sequi nulla praesentium in repellendus error eos minus architecto deserunt vel illo, ex corporis placeat?</p>
+                    </div>
+                </ch5-triggerview>
+                <ch5-triggerview receivestateshow="13">
+                    <div class="subpage-header">
+                        <h1 class="subpage-header-text">Video Conference Selected</h1>
+                        <img src="assets/Line Horizontal.png">
+                    </div>
+                    <div class=subpage-main>
+                        <p id="home-page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quas quidem impedit dolorum iure dolores sequi nulla praesentium in repellendus error eos minus architecto deserunt vel illo, ex corporis placeat?</p>
+                    </div>
+                </ch5-triggerview>
+                <ch5-triggerview receivestateshow="14">
+                    <div class="subpage-header">
+                        <h1 class="subpage-header-text">Phone Selected</h1>
+                        <img src="assets/Line Horizontal.png">
+                    </div>
+                    <div class=subpage-main>
+                        <p id="home-page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quas quidem impedit dolorum iure dolores sequi nulla praesentium in repellendus error eos minus architecto deserunt vel illo, ex corporis placeat?</p>
+                    </div>
+                </ch5-triggerview>
+                <ch5-triggerview receivestateshow="15">
+                    <div class="subpage-header">
+                        <h1 class="subpage-header-text">Apple TV Selected</h1>
+                        <img src="assets/Line Horizontal.png">
+                    </div>
+                    <div class=subpage-main>
+                        <p id="home-page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quas quidem impedit dolorum iure dolores sequi nulla praesentium in repellendus error eos minus architecto deserunt vel illo, ex corporis placeat?</p>
+                    </div>
+                </ch5-triggerview>
+            </div>
+            <div class="right-bar">
+                <div>
+                    <h2 class="rightbar-label-text">Microphone</h2>
+                    <ch5-toggle id="mic-btn" labelon="On" labeloff="Off" sendeventonclick="100" receivestatevalue="100"></ch5-toggle>
+                </div>
+                <div>
+                    <h2 class="rightbar-label-text">Volume</h2>
+                    <ch5-button class="volume-btn" customclass="volume-btn-custom" type="secondary" shape="circle" iconurl="assets/Volume Hi.png" sendeventontouch="4"></ch5-button>
+                    <ch5-button class="volume-btn" customclass="volume-btn-custom" type="secondary" shape="circle" iconurl="assets/Volume Lo.png" sendeventontouch="5"></ch5-button>
+                    <ch5-button class="volume-btn" customclass="volume-btn-custom" type="secondary" shape="circle" iconurl="assets/Volume Mute.png" sendeventonclick="6" receivestateselected="6"></ch5-button>
+                </div>
+            </div>    
+        </div>
+        <div class="bottom-bar">
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="default" label="Home" iconurl="assets/Home.png" iconposition="top" sendeventonclick="63" receivestateselected="63"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="primary" label="Laptop" iconurl="assets/Laptop.png" iconposition="top" sendeventonclick="12" receivestateselected="12"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="info" label="Video Conference" iconurl="assets/Users.png" iconposition="top" sendeventonclick="13" receivestateselected="13"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="text" label="Phone" iconurl="assets/Phone.png" iconposition="top" sendeventonclick="14" receivestateselected="14"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="danger" label="Apple TV" iconurl="assets/Apple.png" iconposition="top" sendeventonclick="15" receivestateselected="15"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="warning" label="Apple TV" iconurl="assets/Apple.png" iconposition="top" sendeventonclick="15" receivestateselected="15"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="success" label="Apple TV" iconurl="assets/Apple.png" iconposition="top" sendeventonclick="15" receivestateselected="15"></ch5-button>
+            <ch5-button class="source-btn" customclass="source-btn-custom" type="secondary" label="Apple TV" iconurl="assets/Apple.png" iconposition="top" sendeventonclick="15" receivestateselected="15"></ch5-button>
+        
+        </div>
+    </ch5-triggerview>
+
+        <!--*************************************************************************************-->
+    </body>
+</html> 
+

@@ -1,0 +1,7 @@
+<Device Model="RMC3">
+   <Network Type="Cresnet" Id="01"/>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="Core3 UI XPanel" DeviceId="09" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="TSW-760" DeviceId="1A"/>
+   </Network>
+</Device>
